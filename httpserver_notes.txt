@@ -1,0 +1,11 @@
+look into multi-part/form POST data. It seems like it's getting a representation encoded instead of the the literal value.
+
+So you end up with things like:
+
+b&apos;something&apos;
+
+
+-----------------------------------------
+
+
+Implement 301 and 302 redirect into the API.

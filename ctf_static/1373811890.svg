@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:svg="http://www.w3.org/2000/svg" id="svg2" viewBox="0 0 426.27 575.01" version="1.0">
+  <defs id="defs4">
+    <linearGradient id="linearGradient3290">
+      <stop id="stop3292" stop-color="#585858" offset="0"/>
+      <stop id="stop3294" stop-color="#a1a1a1" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3296" x1="368.21" xlink:href="#linearGradient3290" gradientUnits="userSpaceOnUse" x2="485.97" y1="472.9" y2="473.41"/>
+    <linearGradient id="linearGradient3784" y2="372.65" gradientUnits="userSpaceOnUse" y1="363.73" x2="482.15" x1="322.58">
+      <stop id="stop3780" stop-color="#4d4d4d" offset="0"/>
+      <stop id="stop3782" stop-color="#b4b4b4" offset="1"/>
+    </linearGradient>
+    <linearGradient id="linearGradient3792" x1="366.82" xlink:href="#linearGradient3290" gradientUnits="userSpaceOnUse" x2="487.83" y1="572.69" y2="572.69"/>
+  </defs>
+  <g id="layer2" transform="translate(-320.63 -12.372)">
+    <g id="g3352" transform="matrix(2.5494 0 0 2.5494 -496.79 -910.09)">
+      <path id="path3298" fill-rule="evenodd" fill="#6c6c6c" d="m323.13 543.37c-3.8358 0.0251-2.3795 0.88272-1.3466 1.7827l41.014 36.198c7.1718 5.8822 9.8742 6.4804 30.614 5.8122 22.511-0.72528 90.452-7.2652 90.452-7.2652s3.6326 1.0898 1.453-3.2694-162.19-33.258-162.19-33.258z"/>
+      <path id="path3277" fill-rule="evenodd" fill="#595959" d="m324.18 385.17v81.825l44.446 23.017 0.14352-91.886-44.59-12.955z"/>
+      <path id="path3275" fill-rule="evenodd" fill="#101010" d="m445.18 399.79c1.0158 0 22.686-1.1819 34.055-1.2066 5.8051-0.0126 6.619 0.58468 6.7148 1.9479 0.12349 1.7571 0.0217 3.5199-6.7654 3.8637-5.2397 0.26545-14.387 0.77034-33.325 1.7383l-0.67968-6.3433z"/>
+      <path id="path3273" fill-rule="evenodd" fill="#101010" d="m444.82 427.79c1.0158 0 22.686-1.1819 34.055-1.2066 5.8051-0.0126 6.619 0.58468 6.7148 1.9479 0.12349 1.7571 0.0217 3.5199-6.7654 3.8637-5.2397 0.26545-14.387 0.77034-33.325 1.7383l-0.67968-6.3433z"/>
+      <path id="path3271" fill-rule="evenodd" fill="#101010" d="m444.82 455.61c1.0158 0 22.686-1.1819 34.055-1.2066 5.8051-0.0126 6.619 0.58468 6.7148 1.9479 0.12349 1.7571 0.0217 3.5199-6.7654 3.8637-5.2397 0.26545-14.387 0.77034-33.325 1.7383l-0.67968-6.3433z"/>
+      <path id="path3269" fill-rule="evenodd" fill="#101010" d="m445.89 484.91c1.0158 0 21.623-1.5929 32.992-1.6159 5.8051-0.0117 6.619 0.54351 6.7148 1.8107 0.12349 1.6334 0.0217 3.272-6.7654 3.5917-5.2397 0.24676-14.387 0.71609-33.325 1.6159l0.38361-5.4024z"/>
+      <path id="path3267" fill-rule="evenodd" fill="url(#linearGradient3792)" d="m368.63 564.66c7.632-3.0903 9.1413-1.3247 4.3407 5.4454l112.43-8.8658s-1.1082 2.5858 1.1082 2.5858 1.847 13.668-2.5858 13.668c-4.4329 0-100.65 6.616-100.65 6.616-6.1656 0.37935-14.883-2.2409-14.883-2.3021 0.00094-2.8994-3.6976-15.67 0.23542-17.147z"/>
+      <path id="rect2494" fill="#88ff2c" d="m445.88 396.7v104.59l-22.914-2.2905v-104.59l22.914 2.2905z"/>
+      <rect id="rect2492" opacity=".76316" height="104.6" width="50.009" y="394.41" x="372.97"/>
+      <path id="path2476" fill-rule="evenodd" fill="#464646" d="m322.58 363.73c0 16.797-0.7635 21.378 0.7635 22.142 1.527 0.7635 45.429 12.836 45.429 12.836l-0.28984-25.912-45.902-9.066z"/>
+      <path id="path2474" fill-rule="evenodd" fill="url(#linearGradient3784)" d="m329.45 365.4 36.266 6.8715s7.635 2.2905 41.611 2.2905 77.114-1.9088 77.114-1.9088 8.3985-0.7635-11.071-3.4358c-19.469-2.6722-41.229-7.2533-56.499-7.2533s-124.45-1.1452-87.421 3.4358z"/>
+      <path id="path2478" fill-rule="evenodd" fill="url(#linearGradient3296)" d="m368.38 372.64s13.824 1.6636 33.293 1.6636 80.475-1.6504 80.475-1.6504 4.1992-0.38175 4.581 5.7263c0.38175 6.108 0 20.615 0 20.615l-103.45 2.8961c-4.1992-0.15373-7.2533-0.59746-10.307-2.1326v4.581c2.4178 1.7327 5.9808 2.3194 9.9255 2.2905l103.07-3.054v23.669l-102.31 3.054c-3.8419 0.11173-8.4848-1.2461-10.689-2.2905v5.7263c2.1241 0.88752 5.4542 1.3656 10.307 1.1452l102.31-3.054v22.523l-101.93 4.1993c-3.8492 0.63588-7.4496-0.10545-9.9255-1.9088v4.9628c1.2436 1.4778 3.8483 2.8477 9.162 2.2905l103.07-4.1992v23.287l-103.07 5.3445c-6.2038 0.65769-6.6375-1.0043-9.9255-2.2905l0.38175 5.7262c2.7144 1.4423 3.5473 1.7257 10.307 1.1452l101.93-4.581v72.914l-103.07 8.3985-9.5438 1.1452v-3.8175c-2.6653-0.0924-4.8844 1.2658-4.7574 6.2l0.16981-200.52z"/>
+      <path id="path2480" fill-rule="evenodd" fill="#464646" d="m322.58 390.59c0 16.797-0.7635 19.378 0.7635 20.142 1.527 0.7635 44.994 16.125 44.994 16.125l0.0525-22.906-45.81-13.361z"/>
+      <path id="path2482" fill-rule="evenodd" fill="#464646" d="m322.12 416.6c0 16.797-0.7635 19.378 0.7635 20.142 1.527 0.7635 45.428 18.598 45.428 18.598l0.0191-22.618-46.211-16.121z"/>
+      <path id="path2484" fill-rule="evenodd" fill="#464646" d="m322.1 440.46c0 16.797-0.7635 19.378 0.7635 20.142 1.527 0.7635 45.428 22.598 45.428 22.598l0.0193-22.762-46.211-19.978z"/>
+      <path id="path2486" fill-rule="evenodd" fill="#464646" d="m322.43 465.56c0 16.797-0.7635 77.412 0.7635 78.175 1.527 0.7635 45.204 38.071 45.204 38.071l0.23045-91.792-46.198-24.454z"/>
+      <path id="path3288" fill-rule="evenodd" fill="#6f6f6f" d="m372.97 568.38c38.563-1.8666 78.026-2.6073 113.35-8.5207l0.16077 3.6976c-41.339 5.7016-76.547 5.8301-113.51 7.5561v-2.733z"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Openclipart</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Server</dc:title>
+        <dc:date>2013-07-14T14:24:50</dc:date>
+        <dc:description>An image of a server.</dc:description>
+        <dc:source>http://openclipart.org/detail/180867/server-by-rdevries-180867</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>rdevries</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>computer</rdf:li>
+            <rdf:li>computers</rdf:li>
+            <rdf:li>digital</rdf:li>
+            <rdf:li>hardware</rdf:li>
+            <rdf:li>internet</rdf:li>
+            <rdf:li>server</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

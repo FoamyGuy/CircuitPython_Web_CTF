@@ -1,0 +1,14 @@
+{
+  "users": {
+    "admin": {
+      "password": "admin",
+      "is_admin": true,
+      "files": ["*"]
+    },
+    "sally": {
+      "password": "E(#ek43ksXdk$",
+      "is_admin": false,
+      "files": ["sally_homepage.html", "sally_contactform.html"]
+    }
+  }
+}

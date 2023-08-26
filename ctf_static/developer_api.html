@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<!--
+ // WEBSITE: https://themefisher.com
+ // TWITTER: https://twitter.com/themefisher
+ // FACEBOOK: https://www.facebook.com/themefisher
+ // GITHUB: https://github.com/themefisher/
+-->
+
+<html lang="zxx">
+
+<head>
+  <meta charset="utf-8">
+  <title>LazyHosting API Docs</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- plugins -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Main Stylesheet -->
+  <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+<nav class="is-sticky-top navbar navigation" role="navigation" aria-label="main navigation">
+   <div class="container">
+      <div class="navbar-brand">
+         <a class="navbar-item" href="index.html">
+            LazyHosting Docs
+         </a>
+
+         <a role="button" class="navbar-burger burger" aria-expanded="false" data-target="navbar-links">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+         </a>
+      </div>
+
+      <div id="navbar-links" class="navbar-menu">
+         <div class="navbar-start ml-auto">
+            <a class="navbar-item" href="/">Home</a>
+         </div>
+
+         <div class="navbar-end ml-0">
+            <div class="navbar-item py-0">
+               <form class="search-wrapper hide-on-desktop my-3" class="search-wrapper" action="search.html">
+                  <input id="search-by" name="s" type="search" class="input" placeholder="Search here ...">
+                  <button class="border-0 bg-white p-3" type="submit"><i class="ti-search"></i></button>
+               </form>
+
+               <a href="/changelog.html" class="btn btn-sm btn-outline-primary ml-4">changelog</a>
+               <a href="/contact.html" class="btn btn-sm btn-primary ml-4">contact</a>
+            </div>
+         </div>
+      </div>
+      <form class="search-wrapper is-hidden show-on-desktop" class="search-wrapper" action="search.html">
+         <input id="search-by" name="s" type="search" class="input" placeholder="Search here ...">
+         <button class="border-0 bg-white p-3" type="submit"><i class="ti-search"></i></button>
+      </form>
+   </div>
+</nav>
+
+<!-- details page -->
+<section class="pt-5">
+   <div class="container shadow section-sm rounded">
+      <div class="columns is-multiline">
+         <!-- sidebar -->
+         <div class="column is-3-desktop is-12-tablet">
+            <ul class="sidenav">
+               <li title="Developer Setup" class="sidelist parent active">
+                  <a href="list.html">Developer Setup</a>
+                  <ul>
+                     <li class="sidelist parent active">
+                        <a href="single.html">Delete All</a>
+                     <li class="sidelist">
+                        <a href="single.html">Installation</a>
+                     <li class="sidelist">
+                        <a href="single.html">Configuration</a>
+                     <li class="sidelist">
+                        <a href="single.html">Customization</a>
+                     <li class="sidelist">
+                        <a href="single.html">Requirments</a>
+                     </li>
+                  </ul>
+               </li>
+               <li class="sidelist">
+                  <a href="list.html">Account Billing</a>
+               </li>
+               <li class="sidelist">
+                  <a href="list.html">Advanced Features</a>
+               </li>
+               <li class="sidelist">
+                  <a href="list.html">DNS Management</a>
+               </li>
+            </ul>
+         </div>
+
+         <!-- body -->
+         <div class="column is-8-desktop is-12-tablet">
+            <div class="px-4">
+               <h2 class="mb-50 has-text-weight-medium">Developer Setup</h2> <!-- main content -->
+               <div class="content">
+                 <h3><strong>POST</strong> <code>/dev/delete_all/</code></h3>
+                  <article class="message is-danger">
+                    <div class="message-header">
+                      <h4 class="has-text-white mb-0">Warning</h4>
+                    </div>
+                    <div class="message-body">
+                      <strong>DO NOT USE IN PRODUCTION</strong><br><br>
+                      This operation is <strong>irreversible</strong> and will <strong>erase all user data!</strong>
+                      You must pass an authentication bearar token in order to use this endpoint,
+                      basic username and password are not sufficient.
+                    </div>
+                  </article>
+                  <p>Special endpoint for development only that will wipe the database clean for starting fresh.
+                     Must pass authentication token in the HTTP header:</p>
+
+                     <code>Authentication: Bearer [your token here]</code>
+                  </p>
+               </div>
+               <!-- navigation -->
+               <!--<nav class="pagination">
+                  <a class="nav nav-prev" href="https://examplesite.com/"><i class="ti-arrow-left mr-2"></i>
+                     <span class="d-none d-md-block">Hugo documentation theme</span></a>
+                  <a class="nav nav-next" href="https://examplesite.com/basic-startup/requirments/"> <span
+                        class="d-none d-md-block">Requirments</span><i class="ti-arrow-right ml-2"></i></a>
+               </nav>-->
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- /details page -->
+
+<footer>
+   <div class="container">
+      <div class="columns is-multiline is-align-items-center border-bottom py-5">
+         <div class="column is-4-desktop is-12-tablet">
+            <!--<ul class="list-inline footer-menu has-text-centered has-text-left-desktop">
+               <li class="list-inline-item"><a href="changelog.html">Changelog</a></li>
+               <li class="list-inline-item"><a href="contact.html">contact</a></li>
+               <li class="list-inline-item"><a href="search.html">Search</a></li>
+            </ul>-->
+         </div>
+         <div class="column is-4-desktop is-12-tablet">
+            <!--<a class="navbar-brand is-justify-content-center" href="index.html">
+               <img class="img-fluid" src="images/logo.png" alt="Hugo documentation theme">
+            </a>-->
+         </div>
+         <div class="column is-4-desktop is-12-tablet">
+            <ul class="list-inline social-icons has-text-right-desktop has-text-centered">
+               <li class="list-inline-item"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="fa-brands fa-github"></i></i></a></li>
+               <li class="list-inline-item"><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="py-4 has-text-centered">
+         <small class="text-light">Theme Design &amp; Developed by <a href="https://themefisher.com">themefisher</a></small>
+      </div>
+   </div>
+</footer>
+
+<!-- plugins -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-match-height@0.7.2/dist/jquery.matchHeight-min.min.js"></script>
+
+<!-- Main Script -->
+<script src="/js/script.js"></script>
+
+</body>
+</html>

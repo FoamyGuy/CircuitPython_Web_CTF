@@ -20,7 +20,8 @@ from adafruit_httpserver import (
     METHOD_NOT_ALLOWED_405,
     POST,
     GET,
-    Redirect
+    Redirect,
+    JSONResponse
 )
 
 pool = socketpool.SocketPool(wifi.radio)
@@ -31,6 +32,9 @@ auths = [
     Bearer("#CTF{ERV0Ja1_u0MNXHDfeMN339CR0hqQx1c8cRhdtby4pH5M}"),
 ]
 
+strict_auths = [
+    Bearer("#CTF{ERV0Ja1_u0MNXHDfeMN339CR0hqQx1c8cRhdtby4pH5M}"),
+]
 def get_db_obj():
     f = open("ctf_static/lazy_hosts_db.json", 'r')
     db_obj = json.loads(f.read())
@@ -42,7 +46,8 @@ def base(request: Request):
     """
     Serve the default index.html file.
     """
-    return FileResponse(request, "index.html", headers={"Set-Cookie": "is_admin=false;"})
+    # headers={"Set-Cookie": "is_admin=false;"}
+    return FileResponse(request, "index.html" )
 
 
 @server.route("/login/", [GET, POST])
@@ -61,7 +66,8 @@ def login(request: Request):
         if inc_username not in db_obj['users'].keys():
             return Response(request, "User Not Found", status=NOT_FOUND_404)
 
-        stored_password = db_obj['users'][inc_username]['password']
+        user_obj = db_obj['users'][inc_username]
+        stored_password = user_obj['password']
         if stored_password != inc_password:
             return Response(request, "Invalid Password", status=NOT_FOUND_404)
 
@@ -69,7 +75,11 @@ def login(request: Request):
         #return profile(request, inc_username)
         #return FileResponse(request, "pr")
 
-        return Response(request, "", status=(302, "Found"), headers={"Location": f"/profile/{inc_username}/"})
+        return Response(request, "", status=(302, "Found"), headers={
+            "Location": f"/profile/{inc_username}/",
+            "Set-Cookie": [f"is_admin={'false' if not user_obj['is_admin'] else 'true'}; Path=/",
+                           f"user={inc_username}; Path=/"]
+        })
     else:
         return Response(request, "Invalid Method", status=METHOD_NOT_ALLOWED_405)
 
@@ -95,6 +105,8 @@ def profile(request: Request, username):
     ul_str = f"<ul>{lis_str}</ul>"
 
     profile_html = profile_html.replace("{{ filelist }}", ul_str)
+    admin_visible_val = "none" if not db_obj['users'][username]['is_admin'] else "block"
+    profile_html = profile_html.replace("{{ admin_visible }}", admin_visible_val)
 
     return Response(request, profile_html, content_type="text/html")
     #return FileResponse(request, "index.html", headers={"Set-Cookie": "is_admin=false;"})
@@ -118,12 +130,38 @@ def admin_v3(request: Request):
     return Response(request, "#CTF{BrokenAccessControl}")
 
 
+@server.route("/admin/")
+def admin(request: Request):
+    require_authentication(request, auths)
+
+    resp_str = """Page not found: /admin/
+
+Did you mean?
+/admin/dashboard/
+/admin/files/
+/admin/v3/
+
+#CTF{OverlyInformativeErrorMessages}
+"""
+
+    return Response(request, resp_str)
+
 @server.route("/admin/dashboard/")
 def admin_dashboard(request: Request):
     require_authentication(request, auths)
 
     return Response(request, "#CTF{BadPassword}")
 
+@server.route("/dev/delete_all/", [POST])
+def dev_delete_all(request: Request):
+    print(request.headers)
+    require_authentication(request, strict_auths)
+
+    return JSONResponse(request, {
+        "success": True,
+        "flag": "#CTF{Zer0_Cool;MessWithTheBest.DieLikeTheRest.}",
+        "message": "Congratulations on finding the BossFlag 🎉. Many of the flags in this exercise are based on OWASP Top 10 vulnerabilities. Learn more about them here: https://owasp.org/www-project-top-ten/"
+    })
 
 @server.route("/admin/files/")
 def admin_dashboard(request: Request):
@@ -142,7 +180,8 @@ def admin_dashboard(request: Request):
         return Response(request, fake_passwd_content)
     elif file in os.listdir("ctf_static"):
         return FileResponse(request, file)
-
+    elif file.startswith("../"):
+        return Response(request, "#CTF{../PathTraversal}")
     elif file == 'None':
         f = open("ctf_static/filelist_template.html", 'r')
         filelist_template = f.read()
@@ -152,7 +191,7 @@ def admin_dashboard(request: Request):
         for file in os.listdir("ctf_static"):
             file_lis.append(f'<li><a href="/admin/files/?file={file}">{file}</a></li>')
 
-        file_lis.append("<li>#CTF{Misconfiguration}</li>")
+        file_lis.append("<li>#CTF{SecurityMisconfiguration}</li>")
         lis_str = "\n".join(file_lis)
         files_ul = f"<ul>{lis_str}</ul>"
         filelist_template = filelist_template.replace("{{ files_ul }}", files_ul)

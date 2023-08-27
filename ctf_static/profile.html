@@ -17,10 +17,11 @@
           font-family: 'Open Sans';
       }
 
-      img {
-          padding: 5px;
-          border: 1px solid #ccc;
+
+      .admin-visible{
+          display: {{ admin_visible }} !important;
       }
+
   </style>
 </head>
 
@@ -30,8 +31,9 @@
     <nav class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a class="navbar-item" href="../">
-            <img src="../images/bulma.png" alt="Logo">
+          <a class="navbar-item" href="/">
+            <img src="/virus4.svg" width="48" height="42">
+            LazyHosts.com
           </a>
           <span class="navbar-burger burger" data-target="navbarMenu">
                             <span></span>
@@ -44,7 +46,8 @@
             <div class="tabs is-right">
               <ul>
                 <li class="is-active"><a>Profile</a></li>
-                <li><a href="">Home</a></li>
+                <li><a href="/">Home</a></li>
+                <li class="admin-visible"><a href="/developer_api.html">API Docs</a></li>
               </ul>
             </div>
           </div>
@@ -68,7 +71,7 @@
             Your Files:
           </h2>
           <p class="">
-          {{ filelist }}
+            {{ filelist }}
           </p>
         </div>
       </div>

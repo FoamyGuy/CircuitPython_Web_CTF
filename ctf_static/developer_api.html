@@ -113,14 +113,17 @@
                     <div class="message-body">
                       <strong>DO NOT USE IN PRODUCTION</strong><br><br>
                       This operation is <strong>irreversible</strong> and will <strong>erase all user data!</strong>
-                      You must pass an authentication bearar token in order to use this endpoint,
+                      You must pass an authorization bearar token in order to use this endpoint,
                       basic username and password are not sufficient.
                     </div>
                   </article>
                   <p>Special endpoint for development only that will wipe the database clean for starting fresh.
                      Must pass authentication token in the HTTP header:</p>
 
-                     <code>Authentication: Bearer [your token here]</code>
+                     <code>Authorization: Bearer [your token here]</code>
+                     <br><br>
+                     Reminder:<br>
+                     If you use the AutomagicAuthinator™ with your <code>.env</code> file it will just-work™.
                   </p>
                </div>
                <!-- navigation -->

@@ -1,0 +1,41 @@
+{
+  "users": {
+    "admin": {
+      "password": "admin",
+      "is_admin": true,
+      "files": [
+        "*",
+        "/etc/passwd",
+        ".env"
+      ]
+    },
+    "sally": {
+      "password": "E(#ek43ksXdk$",
+      "is_admin": false,
+      "files": [
+        "sally_homepage.html",
+        "sally_contactform.html"
+      ]
+    },
+    "trevon": {
+      "password": "NFL_Cowboy#7",
+      "is_admin": false,
+      "files": [
+        "trevon_press_inquiry.html",
+        "trevon_homepage.html",
+        "trevon_gallery.html",
+        "trevon_photos/"
+      ]
+    },
+    "fudgecakey": {
+      "password": "#CTF{Un-hashedPasswords:x}",
+      "is_admin": false,
+      "files": [
+        "fudgecakey_trophy_room.html",
+        "fudgecakey_homepage.html",
+        "fudgecakey_stream.html",
+        "fudgecakey_vods/"
+      ]
+    }
+  }
+}

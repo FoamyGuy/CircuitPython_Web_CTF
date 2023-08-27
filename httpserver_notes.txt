@@ -9,3 +9,14 @@ b&apos;something&apos;
 
 
 Implement 301 and 302 redirect into the API.
+
+
+-------------------------------------------
+
+
+Doesn't seem possible to use multiple Set-Cookie headers, but the spec seems to call for it in cases
+when server wants to set multiple cookies.
+
+"To send multiple cookies, multiple Set-Cookie headers should be sent in the same response. "
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
+

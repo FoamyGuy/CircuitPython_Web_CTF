@@ -1,6 +1,6 @@
-# SPDX-FileCopyrightText: 2022 Dan Halbert for Adafruit Industries
+# SPDX-FileCopyrightText: 2023 Tim C (Foamyguy)
 #
-# SPDX-License-Identifier: Unlicense
+# SPDX-License-Identifier: MIT
 import json
 import os
 from binascii import unhexlify
@@ -238,10 +238,6 @@ server.start(str(wifi.radio.ipv4_address))
 
 while True:
     try:
-        # Do something useful in this section,
-        # for example read a sensor and capture an average,
-        # or a running total of the last 10 samples
-
         # Process any waiting requests
         pool_result = server.poll()
 

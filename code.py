@@ -3,9 +3,11 @@
 # SPDX-License-Identifier: Unlicense
 import json
 import os
+from binascii import unhexlify
 
 import socketpool
 import wifi
+import aesio
 
 from adafruit_httpserver import (
     Server,
@@ -36,10 +38,41 @@ strict_auths = [
     Bearer("#CTF{ERV0Ja1_u0MNXHDfeMN339CR0hqQx1c8cRhdtby4pH5M}"),
 ]
 def get_db_obj():
-    f = open("ctf_static/lazy_hosts_db.json", 'r')
-    db_obj = json.loads(f.read())
+    def decrypt_string(keystring, inpstring):
+        # SPDX-FileCopyrightText: 2022 Mark McGookin
+        #
+        # SPDX-License-Identifier: MIT
+        # https://github.com/markmcgookin/circuitpython-easycrypt/tree/main
+        # Slight modifications by foamyguy
+
+        # Convert our string key to a byte array
+        key = bytearray(keystring)
+
+        # Unhex the input string, then convert it into a byte array
+        inp = bytes(unhexlify(inpstring))
+
+        # Create a byte array to store the output in
+        outp = bytearray(len(inp))
+
+        # Create our cypher
+        cipher = aesio.AES(key, aesio.MODE_CTR)
+
+        # Decrypt the data into the output array
+        cipher.decrypt_into(inp, outp)
+
+        # Conver the unencrypted bytes into a string to return
+        trans = outp.decode()
+
+        return trans
+
+    f = open("ctf_static/encrypted_lazy_hosts_db.txt", 'rb')
+    encrypted_data = f.read()
     f.close()
-    return db_obj
+    f = open("ctf_static/db_key.txt", "rb")
+    key = f.read()
+    f.close()
+    decrypted_data = decrypt_string(key, encrypted_data)
+    return json.loads(decrypted_data)
 
 @server.route("/")
 def base(request: Request):

@@ -79,4 +79,5 @@ All of these entities helped in the creation of this CTF. Listed in no particula
 - Michael Pokusa for many improvements to the HTTPServer library which were crucial in the making of this CTF
 - TryHackMe.com for the tutorials I used to learn about this material, and inspiration for the CTF
 - CircuitPython Project and Community for making it so easy to build and run a project like this
+- Darknet Diaries podcast for offering amazing and intriguing stories about cybersecurity and other dark corners of the web. 
 - You for being interested and / or attempting the CTF

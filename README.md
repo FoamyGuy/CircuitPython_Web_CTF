@@ -6,7 +6,11 @@ The excercise is intended to help bring awareness to and provide an opportunity 
 
 There are __ flags hidden within vulnerabilites of the fictional web host LazyHosts.com. Can you find them all?
 
+If you find all of the flags feel free to submit a PR adding your nick to the [CTF_HOF.md](CTF_HOF.md) file.
+
 The [OWASP Top 10 List](https://owasp.org/www-project-top-ten/) might be a good thing to peruse for inspiration about where to look 😉
+
+
 
 ## Installation Instructions
 
@@ -62,3 +66,17 @@ The most challenging flag (The BossFlag) can technically be completed in the bro
 
    If you already found the flags via the web front end you could make a second attempt a hile later by analyzing the code. This could add a slight bit of replay-ability to the CTF.
 </details>
+
+## Miscellaneous
+
+The `utils/` directory contains code and resources that don't need to be put on the `CIRCUITPY` drive under normal circumstances. They're helper utilities that I used during the creation of the CTF. Feel free to take a look if you're interested, but you might want to hold off if you haven't completed the CTF and don't want potential spoiler information.
+
+## Credits / Thank You's
+
+All of these entities helped in the creation of this CTF. Listed in no particular order:
+
+- Dan Halbert for creating the initial HTTPServer library
+- Michael Pokusa for many improvements to the HTTPServer library which were crucial in the making of this CTF
+- TryHackMe.com for the tutorials I used to learn about this material, and inspiration for the CTF
+- CircuitPython Project and Community for making it so easy to build and run a project like this
+- You for being interested and / or attempting the CTF

@@ -6,7 +6,7 @@ The excercise is intended to help bring awareness to and provide an opportunity 
 
 There are __ flags hidden within vulnerabilites of the fictional web host LazyHosts.com. Can you find them all?
 
-If you find all of the flags feel free to submit a PR adding your nick to the [CTF_HOF.md](CTF_HOF.md) file.
+If you find all the flags feel free to submit a PR adding your nick to the [CTF_HOF.md](CTF_HOF.md) file.
 
 The [OWASP Top 10 List](https://owasp.org/www-project-top-ten/) might be a good thing to peruse for inspiration about where to look 😉
 
@@ -51,7 +51,7 @@ Most of the flags can be found using only your browser, the view page source fun
 
 </details>
 
-The most challenging flag (The BossFlag) can technically be completed in the browser, but is perhaps easier to complete by using an additional seperate tool that allows sending HTTP requests. There are many such tools available here are a few that I've used:
+The most challenging flag (The BossFlag) can technically be completed in the browser, but is perhaps easier to complete by using an additional separate tool that allows sending HTTP requests. There are many such tools available here are a few that I've used:
 - Postman
 - cURL
 - Python Requests Library
@@ -71,12 +71,15 @@ The most challenging flag (The BossFlag) can technically be completed in the bro
 
 The `utils/` directory contains code and resources that don't need to be put on the `CIRCUITPY` drive under normal circumstances. They're helper utilities that I used during the creation of the CTF. Feel free to take a look if you're interested, but you might want to hold off if you haven't completed the CTF and don't want potential spoiler information.
 
+If you enjoyed this CTF and would be interested in more or perhaps more challenging exercises feel free to reach out to me. I have a few more ideas for potential ways to hide flags, but I don't know when or if I'll get to them. Hearing from folks who enjoyed it would serve to motivate the expansion of this repo to additional CTFs.
+
 ## Credits / Thank You's
 
 All of these entities helped in the creation of this CTF. Listed in no particular order:
 
 - Dan Halbert for creating the initial HTTPServer library
 - Michael Pokusa for many improvements to the HTTPServer library which were crucial in the making of this CTF
+- Mark McGookin for publishing a helper module for AES encryption on CircuitPthon
 - TryHackMe.com for the tutorials I used to learn about this material, and inspiration for the CTF
 - CircuitPython Project and Community for making it so easy to build and run a project like this
 - Darknet Diaries podcast for offering amazing and intriguing stories about cybersecurity and other dark corners of the web. 

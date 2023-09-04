@@ -41,7 +41,7 @@ f = open("ctf_static/lazy_hosts_db.json", "rb")
 db_data = f.read()
 f.close()
 
-f = open("../ctf_static/db_key.txt", "rb")
+f = open("ctf_static/db_key.txt", "rb")
 key = f.read()
 f.close()
 

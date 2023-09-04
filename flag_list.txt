@@ -1,0 +1,11 @@
+- Comment home page
+- Hidden field home page
+- admin/v3/ with cookie swap
+- admin/files/
+- admin/
+- flag.ctf file
+- db_key file
+- .env file api token
+- /etc/passwd lfi
+- db decrypted
+- delete all API

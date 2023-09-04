@@ -176,9 +176,6 @@
 <!---------------------------
 Notes to Jim:
 
- - Do we need to use this typewriter section
-   for something? Or should we get rid of it?
-
  - The new admin panel is available for testing
    now at /admin/v3/. You have to be logged with
    the admin account to use it (obviously).
@@ -186,8 +183,18 @@ Notes to Jim:
  - Remember to put your api token into the .env
    file.
 
+ - Don't forget to delete the test_user account
+   auth: test_user | password
+
 #CTF{CarefulWithComment}
 ----------------------------->
+
+
+
+<!--
+Do we need to use this typewriter section
+for something? Or should we get rid of it?
+-->
 
 <!--<section class="hero is-medium has-text-centered">
   <div class="hero-body">
@@ -209,8 +216,7 @@ Notes to Jim:
   </div>
 </section>-->
 
-<!--<span style="display: none;">&num;CTF&#123;ViewSourceIsNotHacking!&#125;</span>-->
-<input type="hidden" value="&num;CTF&#123;ViewSourceIsNotHacking!&#125;">
+<input class="admin-visible" type="hidden" value="#CTF{ViewSourceIsNotHacking}">
 
 <footer>
   <div class="py-4 has-text-centered">

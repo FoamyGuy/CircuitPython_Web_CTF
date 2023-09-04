@@ -6,7 +6,16 @@
       "files": [
         "*",
         "/etc/passwd",
-        ".env"
+        ".env",
+        "Authorization: Basic YWRtaW46YWRtaW4="
+      ]
+    },
+    "test_user": {
+      "password": "password",
+      "is_admin": false,
+      "files": [
+        "test_index.html",
+        "test_style.css"
       ]
     },
     "sally": {

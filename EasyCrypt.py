@@ -26,7 +26,7 @@ def encrypt_string(keystring, inpstring, ivstring):
     outp = bytearray(len(inp))
 
     # Create our cypher
-    cipher = aesio.AES(key, mode, iv)
+    cipher = aesio.AES(key, mode)
 
     # Encrypt the input into the output
     cipher.encrypt_into(inp, outp)
@@ -51,7 +51,7 @@ def decrypt_string(keystring, inpstring, ivstring):
     outp = bytearray(len(inp))
     
     # Create our cypher
-    cipher = aesio.AES(key, mode, iv)
+    cipher = aesio.AES(key, mode)
     
     # Decrypt the data into the output array
     cipher.decrypt_into(inp, outp)

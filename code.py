@@ -23,7 +23,7 @@ from adafruit_httpserver import (
     POST,
     GET,
     Redirect,
-    JSONResponse
+    JSONResponse, FOUND_302, Headers
 )
 
 pool = socketpool.SocketPool(wifi.radio)
@@ -108,11 +108,23 @@ def login(request: Request):
         #return profile(request, inc_username)
         #return FileResponse(request, "pr")
 
-        return Response(request, "", status=(302, "Found"), headers={
-            "Location": f"/profile/{inc_username}/",
-            "Set-Cookie": [f"is_admin={'false' if not user_obj['is_admin'] else 'true'}; Path=/",
-                           f"user={inc_username}; Path=/"]
-        })
+        # return Response(request, "", status=(302, "Found"), headers={
+        #     "Location": f"/profile/{inc_username}/",
+        #     "Set-Cookie": [f"is_admin={'false' if not user_obj['is_admin'] else 'true'}; Path=/",
+        #                    f"user={inc_username}; Path=/"]
+        # })
+
+        headers = Headers()
+        is_admin_val = 'false' if not user_obj['is_admin'] else 'true'
+        headers.add("Set-Cookie", f"is_admin={is_admin_val}; Path=/")
+        headers.add("Set-Cookie", f"user={inc_username}; Path=/")
+
+        return Redirect(request, f"/profile/{inc_username}/", status=FOUND_302, headers=headers)
+
+        # return Redirect(request, f"/profile/{inc_username}/", status=FOUND_302, cookies={
+        #     "is_admin": 'false' if not user_obj['is_admin'] else 'true',
+        #     "user": f"{inc_username}"
+        # })
     else:
         return Response(request, "Invalid Method", status=METHOD_NOT_ALLOWED_405)
 
@@ -199,7 +211,7 @@ def dev_delete_all(request: Request):
 @server.route("/admin/files/")
 def admin_dashboard(request: Request):
     require_authentication(request, auths)
-    file = request.query_params.get("file")
+    file = request.query_params.get("file", "None")
     print(f"file: {file}.")
     if file == ".env":
         f = open("fake_env.env", 'r')
@@ -215,7 +227,7 @@ def admin_dashboard(request: Request):
         return FileResponse(request, file)
     elif file.startswith("../"):
         return Response(request, "#CTF{../PathTraversal}")
-    elif file == 'None':
+    elif file is 'None':
         f = open("ctf_static/filelist_template.html", 'r')
         filelist_template = f.read()
         f.close()
